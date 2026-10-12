@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8eee7">
+  <title>Amelia & James — Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="music-control">
+    <button id="musicToggle" class="music-button" type="button" aria-label="Play music" title="Play or pause music">
+      <span id="musicIcon">♫</span><span id="musicLabel">Music off</span>
+    </button>
+    <!-- Add your own royalty-free MP3 at assets/music.mp3 to enable music. -->
+    <audio id="weddingMusic" loop preload="none">
+      <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <main>
+    <section class="envelope-screen" id="envelopeScreen" aria-label="Open invitation">
+      <div class="tiny-flower flower-one">✿</div>
+      <div class="tiny-flower flower-two">❀</div>
+      <p class="eyebrow">A little note for you</p>
+      <button id="openInvitation" class="envelope-button" type="button" aria-label="Open the wedding invitation">
+        <span class="envelope-back"></span>
+        <span class="letter-peek">
+          <span class="monogram">A <i>&</i> J</span>
+          <span class="letter-line"></span><span class="letter-line short"></span>
+        </span>
+        <span class="envelope-body"></span>
+        <span class="envelope-flap"></span>
+        <span class="wax-seal">A<span>♥</span>J</span>
+      </button>
+      <p class="touch-copy">Touch to open<br><span>your invitation</span></p>
+      <div class="heart">♥</div>
+      <p class="screen-note">Made with love, just for you</p>
+    </section>
+
+    <div id="invitation" class="invitation hidden">
+      <header class="hero" id="home">
+        <div class="hero-photo" role="img" aria-label="Romantic coastal wedding scenery"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow light">THE WEDDING OF</p>
+          <h1>Amelia <span>&</span> James</h1>
+          <p class="hero-subtitle">Two hearts. One beautiful journey.</p>
+          <div class="little-heart">♡</div>
+          <p class="hero-date">SATURDAY <span></span> MAY 24, 2027</p>
+          <a class="text-link" href="#details">JOIN OUR CELEBRATION ↓</a>
+        </div>
+      </header>
+
+      <section class="section intro reveal">
+        <p class="eyebrow">WITH FULL HEARTS</p>
+        <h2>And a little bit of magic…</h2>
+        <p class="intro-copy">Together with our families, we invite you to share in a day filled with love, laughter, and the beginning of our forever.</p>
+        <div class="ornament">❦</div>
+      </section>
+
+      <section class="section countdown-section reveal" id="countdown">
+        <p class="eyebrow">THE BIG DAY IS COMING</p>
+        <h2>Until we say “I do”</h2>
+        <div class="countdown" aria-label="Countdown to wedding day">
+          <div class="time-box"><strong id="days">—</strong><span>Days</span></div>
+          <div class="time-box"><strong id="hours">—</strong><span>Hours</span></div>
+          <div class="time-box"><strong id="minutes">—</strong><span>Minutes</span></div>
+          <div class="time-box"><strong id="seconds">—</strong><span>Seconds</span></div>
+        </div>
+        <p id="countdownMessage" class="small-note">Counting down to our special day</p>
+      </section>
+
+      <section class="section details-section reveal" id="details">
+        <p class="eyebrow">THE DETAILS</p>
+        <h2>A day to remember</h2>
+        <div class="details-grid">
+          <article class="detail-card">
+            <div class="detail-icon">♧</div>
+            <h3>The Ceremony</h3>
+            <p class="detail-time">4:00 PM</p>
+            <p>Saturday, May 24, 2027</p>
+            <p>Garden vows & happy tears</p>
+          </article>
+          <article class="detail-card">
+            <div class="detail-icon">⌖</div>
+            <h3>The Reception</h3>
+            <p class="detail-time">6:00 PM</p>
+            <p>The Willow Creek Estate</p>
+            <p>123 Garden Lane<br>Santa Barbara, CA</p>
+          </article>
+          <article class="detail-card">
+            <div class="detail-icon">♧</div>
+            <h3>Dress Code</h3>
+            <p class="detail-time">Garden Chic</p>
+            <p>Formal attire, soft colors</p>
+            <p>Bring a layer for the evening breeze.</p>
+          </article>
+        </div>
+        <a class="pill-button" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Santa+Barbara+California">⌖ &nbsp; View location on Google Maps</a>
+        <p class="small-note">This is a fictional venue and address for the demo.</p>
+      </section>
+
+      <section class="story-section reveal">
+        <div class="story-photo"></div>
+        <div class="story-copy">
+          <p class="eyebrow light">OUR STORY</p>
+          <h2>A journey of love</h2>
+          <p>From one unexpected hello to a thousand little memories, every step brought us here. Now, we can't wait to celebrate the next chapter with our favorite people.</p>
+          <a href="#gallery" class="text-link">A FEW FAVORITE MOMENTS ↓</a>
+        </div>
+      </section>
+
+      <section class="section gallery-section reveal" id="gallery">
+        <p class="eyebrow">LITTLE MOMENTS, BIG LOVE</p>
+        <h2>Our happy place</h2>
+        <div class="gallery">
+          <button class="gallery-image" type="button" data-full="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=85" aria-label="View wedding photo 1"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80" alt="Romantic wedding flowers and ceremony" loading="lazy"></button>
+          <button class="gallery-image" type="button" data-full="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1400&q=85" aria-label="View wedding photo 2"><img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=700&q=80" alt="Wedding couple celebrating" loading="lazy"></button>
+          <button class="gallery-image" type="button" data-full="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1400&q=85" aria-label="View wedding photo 3"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=700&q=80" alt="Elegant wedding celebration" loading="lazy"></button>
+          <button class="gallery-image" type="button" data-full="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1400&q=85" aria-label="View wedding photo 4"><img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=700&q=80" alt="Wedding bouquet and details" loading="lazy"></button>
+          <button class="gallery-image" type="button" data-full="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?auto=format&fit=crop&w=1400&q=85" aria-label="View wedding photo 5"><img src="https://mlri412iwjbc.i.optimole.com/cb:c8wx~30e01/w:auto/h:auto/q:mauto/f:best/https://www.davidaustin.com/wp-content/uploads/2024/06/outdoor-wedding-reception-bride.jpg" alt="Outdoor wedding reception" loading="lazy"></button>
+          <button class="gallery-image" type="button" data-full="https://images.unsplash.com/photo-1507504031003-b417219a0bea?auto=format&fit=crop&w=1400&q=85" aria-label="View wedding photo 6"><img src="https://t4.ftcdn.net/jpg/01/93/38/99/360_F_193389983_UXs9j5nT7co7x7XLxNWfmLFTqXx0eEwy.jpg" alt="Romantic couple at sunset" loading="lazy"></button>
+        </div>
+
+        <p class="small-note">Demo imagery from Unsplash. Replace these with photos you have permission to use.</p>
+      </section>
+
+      <section class="rsvp-section reveal" id="rsvp">
+        <div class="rsvp-inner">
+          <p class="eyebrow light">KINDLY REPLY</p>
+          <h2>Will you join us?</h2>
+          <p>We would love to celebrate with you. Please let us know by May 1, 2027.</p>
+          <form id="rsvpForm">
+            <label for="guestName">Your name</label>
+            <input id="guestName" name="guestName" autocomplete="name" placeholder="e.g. Taylor Morgan" required>
+            <label for="attendance">Will you attend?</label>
+            <select id="attendance" name="attendance" required>
+              <option value="">Choose your response</option>
+              <option value="Joyfully accepts">Joyfully accepts</option>
+              <option value="Regretfully declines">Regretfully declines</option>
+            </select>
+            <label for="guestCount">Number of guests (including you)</label>
+            <select id="guestCount" name="guestCount">
+              <option>1</option><option>2</option><option>3</option><option>4</option>
+            </select>
+            <label for="message">A little note (optional)</label>
+            <textarea id="message" name="message" rows="3" placeholder="Send the couple a wish…"></textarea>
+            <button class="pill-button submit-button" type="submit">♡ &nbsp; Send RSVP</button>
+            <p class="form-note">Demo only: this form does not send or store responses yet.</p>
+          </form>
+          <p id="rsvpThanks" class="rsvp-thanks" role="status" hidden></p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-flower">❦</div>
+        <p>With love,</p>
+        <h2>Amelia & James</h2>
+        <p class="footer-date">MAY 24, 2027 · SANTA BARBARA</p>
+        <a class="back-top" href="#home">Back to the beginning ↑</a>
+      </footer>
+    </div>
+  </main>
+
+  <dialog id="lightbox" class="lightbox">
+    <button id="closeLightbox" class="close-lightbox" type="button" aria-label="Close photo">×</button>
+    <img id="lightboxImage" src="" alt="Enlarged wedding gallery photo">
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
